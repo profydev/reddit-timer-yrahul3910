@@ -6,6 +6,7 @@ function Main() {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
+      <Route exact path="/" render={() => <div>Hello!</div>} />
       <Route exact path="/search" />
     </Switch>
   );
