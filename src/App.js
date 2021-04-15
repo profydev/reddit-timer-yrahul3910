@@ -1,10 +1,13 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Main from './components/Main';
+import 'normalize.css';
 
 function App() {
   return (
-    <div>
-      App Placeholder
-    </div>
+    <Router>
+      <Main />
+    </Router>
   );
 }
 
