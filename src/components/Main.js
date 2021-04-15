@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import Home from './Home';
+import Header from './Header';
 
 function Main() {
   return (
-    <Switch>
-      <Route exact path="/" render={() => <div>Hello!</div>} />
-      <Route exact path="/search" />
-    </Switch>
+    <>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/search">Search page</Route>
+      </Switch>
+    </>
   );
 }
 
