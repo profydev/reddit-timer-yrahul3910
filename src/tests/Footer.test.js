@@ -1,27 +1,6 @@
-import React from 'react';
-import { MemoryRouter, Route } from 'react-router-dom';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Main from '../components/Main';
-
-const setup = (initialPath = '/') => {
-  // access history as described in the docs
-  // https://reactrouter.com/web/guides/testing/checking-location-in-tests
-  let history;
-  render(
-    <MemoryRouter initialEntries={[initialPath]}>
-      <Main />
-      <Route
-        path="*"
-        render={(props) => {
-          history = props.history;
-          return null;
-        }}
-      />
-    </MemoryRouter>,
-  );
-  return { history };
-};
+import setup from './testUtils';
 
 it('navigates to profy.dev/employers when left link is clicked', () => {
   setup('/');

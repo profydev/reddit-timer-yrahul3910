@@ -1,33 +1,12 @@
-import React from 'react';
-import { MemoryRouter, Route } from 'react-router-dom';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Main from '../components/Main';
-
-const setup = (initialPath = '/') => {
-  // access history as described in the docs
-  // https://reactrouter.com/web/guides/testing/checking-location-in-tests
-  let history;
-  render(
-    <MemoryRouter initialEntries={[initialPath]}>
-      <Main />
-      <Route
-        path="*"
-        render={(props) => {
-          history = props.history;
-          return null;
-        }}
-      />
-    </MemoryRouter>,
-  );
-  return { history };
-};
+import setup from './testUtils';
 
 test('navigates to home page when logo is clicked', () => {
-  setup('/search/javascript');
+  const { history } = setup('/search/javascript');
   const logoLink = screen.getByRole('img', { name: /logo/i });
   userEvent.click(logoLink);
-  expect(screen.getByText(/home page/i)).toBeInTheDocument();
+  expect(history.location.pathname).toEqual('/');
 });
 
 test('navigates to search page when search link is clicked', () => {
@@ -46,6 +25,6 @@ test.each`
   const { history } = setup('/search/javascript');
   const hashLink = screen.getByRole('link', { name: link });
   userEvent.click(hashLink);
-  expect(screen.getByText(/home page/i)).toBeInTheDocument();
+  expect(history.location.pathname).toEqual('/');
   expect(history.location.hash).toEqual(hash);
 });
