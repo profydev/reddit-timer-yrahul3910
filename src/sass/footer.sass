@@ -1,6 +1,26 @@
 .footer
   display: flex
   justify-content: space-around
+  align-items: center
+
   position: absolute
-  width: 100vw
-  bottom: 32px
+  top: 1310px
+  height: 100px
+  width: 100%
+  margin-left: 0
+  padding-top: 1px
+
+  a
+    $footer-text-padding: 80px
+
+    font-size: 14px
+    line-height: 17px
+
+    &:first-of-type
+      padding-left: $footer-text-padding
+    
+    &:last-of-type
+      padding-right: $footer-text-padding
+
+  img
+    padding-left: 48px
