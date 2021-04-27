@@ -31,7 +31,7 @@ export const Button = styled.button`
   cursor: pointer;
   background-color: ${(props) => props.theme.colors.orange};
 
-  width: 217px;
+  padding: 0 16px;
   height: 36px;
   margin-top: 23px;
   margin-bottom: 23px;
