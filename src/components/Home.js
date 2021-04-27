@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import * as S from '../styles/Home.style';
+import * as S from './Home.style';
 
 function Home() {
   return (
