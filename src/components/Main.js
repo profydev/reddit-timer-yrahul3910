@@ -1,9 +1,9 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
-import Home from './Home';
+import Home from './Home/Home';
 import Header from './Header';
-import Footer from './Footer';
+import Footer from './Footer/Footer';
 import theme from '../theme';
 
 function Main() {

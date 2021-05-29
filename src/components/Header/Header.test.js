@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import setup from './testUtils';
+import setup from '../../testUtils';
 
 test('navigates to home page when logo is clicked', () => {
   const { history } = setup('/search/javascript');
