@@ -21,7 +21,7 @@ test.each`
  link | hash
  ${'About'} | ${'#about'}
  ${'How it works'} | ${'#how-it-works'}
-`('navigates to "$link" section when "$link" link is clicked', ({ link, hash }) => {
+`('navigates to "$link" section when "$link" link is clicked', ({ link }) => {
   const { history } = setup('/search/javascript');
   const hashLink = screen.getByRole('link', { name: link });
   userEvent.click(hashLink);
