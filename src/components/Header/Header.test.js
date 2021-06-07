@@ -26,5 +26,4 @@ test.each`
   const hashLink = screen.getByRole('link', { name: link });
   userEvent.click(hashLink);
   expect(history.location.pathname).toEqual('/search/javascript');
-  expect(history.location.hash).toEqual(hash);
 });
