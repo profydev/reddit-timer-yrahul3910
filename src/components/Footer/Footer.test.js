@@ -4,7 +4,8 @@ import setup from '../../testUtils';
 
 it('navigates to profy.dev/employers when left link is clicked', () => {
   setup('/');
-  const link = screen.getByText('profy.dev');
+  let link = screen.getAllByText('profy.dev');
+  link = link[link.length - 1];
   expect(link.closest('a')).toHaveAttribute('href', 'https://profy.dev/employers');
 });
 
