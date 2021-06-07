@@ -21,7 +21,7 @@ function Home() {
         <li>See immediately when to submit your reddit post.</li>
       </S.List>
 
-      <S.Heading style={{ marginTop: '92px' }}>About</S.Heading>
+      <S.Heading id="about" style={{ marginTop: '92px' }}>About</S.Heading>
       <S.Paragraph>
         This app was created during a course on
         <a href="https://profy.dev"> profy.dev </a>
