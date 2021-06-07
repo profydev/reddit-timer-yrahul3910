@@ -24,6 +24,44 @@ export const Subtitle = styled.p`
   color: ${(props) => props.theme.colors.text.lighterGray};
 `;
 
+export const Heading = styled.h2`
+  font-family: ${(props) => props.theme.font.family.serif};
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 487px;
+  align-self: flex-start;
+  margin-left: 351px;
+  margin-bottom: 6px;
+`;
+
+export const Paragraph = styled.p`
+  margin-top: 7px;
+  font-family: ${(props) => props.theme.font.family.sansSerif};
+  color: ${(props) => props.theme.colors.text.lighterGray};
+  margin-left: 351px;
+  margin-right: 351px;
+  line-height: 27px;
+  max-width: 738px;
+`;
+
+export const List = styled.ul`
+  font-family: ${(props) => props.theme.font.family.sansSerif};
+  color: ${(props) => props.theme.colors.text.lighterGray};
+  align-self: flex-start;
+  line-height: 27px;
+
+  margin-left: 351px;
+  margin-top: 6px;  
+  padding-left: 9px;
+
+  list-style-type: "•";
+  list-style-position: outside;
+`;
+
+export const Image = styled.img`
+  display: block;
+`;
+
 export const Button = styled.button`
   outline: none;
   border: none;

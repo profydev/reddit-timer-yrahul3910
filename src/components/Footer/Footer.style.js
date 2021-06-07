@@ -18,14 +18,14 @@ export const Anchor = styled.a`
   line-height: 17px;
 
   &:first-of-type {
-    padding-left: 80px;
+    padding-left: 58px;
   }
 
   &:last-of-type {
-    padding-right: 80px;
+    padding-right: 50px;
   }
 `;
 
 export const Image = styled.img`
-  padding-left: 48px;
+  padding-left: 2px;
 `;
