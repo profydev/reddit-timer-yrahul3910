@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './Home/Home';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
+import Search from './Search/Search';
 import theme from '../theme';
 
 function Main() {
@@ -12,7 +13,8 @@ function Main() {
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/search">Search page</Route>
+        <Route exact path="/search/" component={Search} />
+        <Route path="/search/:query" component={Search} />
       </Switch>
       <Footer />
     </ThemeProvider>
