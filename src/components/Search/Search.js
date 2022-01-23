@@ -10,10 +10,17 @@ class Search extends React.Component {
     this.state = { query };
     this.query = React.createRef();
     this.change = this.change.bind(this);
+    this.click = this.click.bind(this);
   }
 
   change() {
     this.setState({ query: this.query.current.value });
+  }
+
+  click() {
+    const { history } = this.props;
+    const { query } = this.state;
+    history.push(`/search/${query}`);
   }
 
   render() {
@@ -24,7 +31,7 @@ class Search extends React.Component {
         <S.Section>
           <S.Paragraph>r /</S.Paragraph>
           <S.Textbox onChange={this.change} ref={this.query} placeholder="javascript" />
-          <S.Button href={`/search/${query}`}>Search</S.Button>
+          <S.Button onClick={this.click} href={`/search/${query}`}>Search</S.Button>
         </S.Section>
       </S.Main>
     );
@@ -36,6 +43,9 @@ Search.propTypes = {
     params: PropTypes.shape({
       query: PropTypes.string.isRequired,
     }),
+  }).isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
   }).isRequired,
 };
 
