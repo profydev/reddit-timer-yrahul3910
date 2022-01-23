@@ -7,7 +7,7 @@ function Header() {
     <S.Header>
       <Link to="/"><img alt="Logo" src="assets/logo.svg" /></Link>
       <S.LinksList>
-        <Link to="/search/javascript">Search</Link>
+        <Link to="/search/">Search</Link>
         <Link to="/#how-it-works">How it works</Link>
         <Link to="/#about">About</Link>
       </S.LinksList>

@@ -13,6 +13,7 @@ function Main() {
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/search/" component={Search} />
         <Route path="/search/:query" component={Search} />
       </Switch>
       <Footer />
